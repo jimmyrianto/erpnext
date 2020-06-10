@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "allow_import": 1,
  "autoname": "naming_series:",
  "creation": "2013-05-24 19:29:05",
@@ -17,6 +18,7 @@
   "is_return",
   "column_break1",
   "company",
+  "z_company_code",
   "posting_date",
   "posting_time",
   "set_posting_time",
@@ -208,7 +210,7 @@
    "no_copy": 1,
    "oldfieldname": "naming_series",
    "oldfieldtype": "Select",
-   "options": "ACC-SINV-.YYYY.-",
+   "options": "SI..z_company_code..YY..MM.-.#####",
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
@@ -1572,13 +1574,20 @@
    "fieldtype": "Check",
    "label": "Is Internal Customer",
    "read_only": 1
+  },
+  {
+   "fetch_from": "company.z_company_code",
+   "fieldname": "z_company_code",
+   "fieldtype": "Data",
+   "label": "Z Company Code"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 181,
  "is_submittable": 1,
- "modified": "2020-02-10 04:57:11.221180",
- "modified_by": "Administrator",
+ "links": [],
+ "modified": "2020-06-03 08:11:58.761114",
+ "modified_by": "yogi.f@unitedfamilyfood.com",
  "module": "Accounts",
  "name": "Sales Invoice",
  "name_case": "Title Case",

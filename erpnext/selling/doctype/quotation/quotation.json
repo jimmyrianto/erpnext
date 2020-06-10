@@ -17,6 +17,7 @@
   "column_break1",
   "amended_from",
   "company",
+  "z_company_code",
   "transaction_date",
   "valid_till",
   "order_type",
@@ -132,7 +133,7 @@
    "no_copy": 1,
    "oldfieldname": "naming_series",
    "oldfieldtype": "Select",
-   "options": "SAL-QTN-.YYYY.-",
+   "options": "QT..z_company_code..YY..MM.-.#####",
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
@@ -923,6 +924,12 @@
    "label": "Lost Reasons",
    "options": "Lost Reason Detail",
    "read_only": 1
+  },
+  {
+   "fetch_from": "company.z_company_code",
+   "fieldname": "z_company_code",
+   "fieldtype": "Data",
+   "label": "Z Company Code"
   }
  ],
  "icon": "fa fa-shopping-cart",
@@ -930,8 +937,8 @@
  "is_submittable": 1,
  "links": [],
  "max_attachments": 1,
- "modified": "2019-12-30 19:14:56.630270",
- "modified_by": "Administrator",
+ "modified": "2020-06-03 08:13:28.896211",
+ "modified_by": "yogi.f@unitedfamilyfood.com",
  "module": "Selling",
  "name": "Quotation",
  "owner": "Administrator",

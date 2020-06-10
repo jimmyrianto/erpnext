@@ -14,6 +14,8 @@
   "naming_series",
   "salutation",
   "customer_name",
+  "company",
+  "z_customer_ax",
   "gender",
   "customer_type",
   "default_bank_account",
@@ -81,7 +83,7 @@
    "fieldtype": "Select",
    "label": "Series",
    "no_copy": 1,
-   "options": "CUST-.YYYY.-",
+   "options": "z_company_code..####",
    "set_only_once": 1
   },
   {
@@ -465,13 +467,25 @@
    "fieldtype": "Table",
    "label": "Credit Limit",
    "options": "Customer Credit Limit"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "z_customer_ax",
+   "fieldtype": "Data",
+   "label": "Z Customer AX",
+   "reqd": 1
   }
  ],
  "icon": "fa fa-user",
  "idx": 363,
  "image_field": "image",
  "links": [],
- "modified": "2020-01-29 20:36:37.879581",
+ "modified": "2020-06-04 11:28:54.373814",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",

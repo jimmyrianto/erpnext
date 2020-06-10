@@ -16,6 +16,7 @@
   "column_break1",
   "amended_from",
   "company",
+  "z_company_code",
   "posting_date",
   "posting_time",
   "set_posting_time",
@@ -175,7 +176,7 @@
    "no_copy": 1,
    "oldfieldname": "naming_series",
    "oldfieldtype": "Select",
-   "options": "MAT-DN-.YYYY.-",
+   "options": "DN..z_company_code..YY..MM.-.#####",
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
@@ -1250,14 +1251,20 @@
    "fieldtype": "Link",
    "label": "Inter Company Reference",
    "options": "Purchase Receipt"
+  },
+  {
+   "fetch_from": "company.z_company_code",
+   "fieldname": "z_company_code",
+   "fieldtype": "Data",
+   "label": "Z Company Code"
   }
  ],
  "icon": "fa fa-truck",
  "idx": 146,
  "is_submittable": 1,
  "links": [],
- "modified": "2019-12-31 19:17:13.122644",
- "modified_by": "Administrator",
+ "modified": "2020-06-03 08:10:09.221293",
+ "modified_by": "yogi.f@unitedfamilyfood.com",
  "module": "Stock",
  "name": "Delivery Note",
  "owner": "Administrator",

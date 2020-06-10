@@ -18,6 +18,7 @@
   "cb0",
   "employee",
   "department",
+  "z_company_code",
   "lft",
   "rgt",
   "old_parent",
@@ -139,12 +140,18 @@
    "oldfieldname": "target_details",
    "oldfieldtype": "Table",
    "options": "Target Detail"
+  },
+  {
+   "fetch_from": "company.z_company_code",
+   "fieldname": "z_company_code",
+   "fieldtype": "Data",
+   "label": "Z Company Code"
   }
  ],
  "icon": "icon-user",
  "idx": 1,
  "links": [],
- "modified": "2020-01-28 13:50:31.891050",
+ "modified": "2020-06-04 13:20:26.219786",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Sales Person",

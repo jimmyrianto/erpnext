@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "allow_import": 1,
  "autoname": "naming_series:",
  "creation": "2016-06-01 14:38:51.012597",
@@ -12,6 +13,7 @@
   "column_break_5",
   "posting_date",
   "company",
+  "z_company_code",
   "mode_of_payment",
   "party_section",
   "party_type",
@@ -86,7 +88,7 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Series",
-   "options": "ACC-PAY-.YYYY.-",
+   "options": "PE..z_company_code..YY..MM.-.#####",
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
@@ -573,11 +575,18 @@
    "label": "Status",
    "options": "\nDraft\nSubmitted\nCancelled",
    "read_only": 1
+  },
+  {
+   "fetch_from": "company.z_company_code",
+   "fieldname": "z_company_code",
+   "fieldtype": "Data",
+   "label": "Z Company Code"
   }
  ],
  "is_submittable": 1,
- "modified": "2019-12-08 13:02:30.016610",
- "modified_by": "Administrator",
+ "links": [],
+ "modified": "2020-06-03 08:18:39.855261",
+ "modified_by": "yogi.f@unitedfamilyfood.com",
  "module": "Accounts",
  "name": "Payment Entry",
  "owner": "Administrator",

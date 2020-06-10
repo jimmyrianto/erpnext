@@ -18,6 +18,7 @@
   "apply_tds",
   "column_break1",
   "company",
+  "z_company_code",
   "posting_date",
   "posting_time",
   "set_posting_time",
@@ -176,7 +177,7 @@
    "no_copy": 1,
    "oldfieldname": "naming_series",
    "oldfieldtype": "Select",
-   "options": "ACC-PINV-.YYYY.-",
+   "options": "PI..z_company_code..YY..MM.-.#####",
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
@@ -1292,14 +1293,20 @@
    "fieldtype": "Check",
    "label": "Is Internal Supplier",
    "read_only": 1
+  },
+  {
+   "fetch_from": "company.z_company_code",
+   "fieldname": "z_company_code",
+   "fieldtype": "Data",
+   "label": "Z Company Code"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 204,
  "is_submittable": 1,
  "links": [],
- "modified": "2019-12-30 19:13:49.610538",
- "modified_by": "Administrator",
+ "modified": "2020-06-03 07:56:13.479298",
+ "modified_by": "yogi.f@unitedfamilyfood.com",
  "module": "Accounts",
  "name": "Purchase Invoice",
  "name_case": "Title Case",
