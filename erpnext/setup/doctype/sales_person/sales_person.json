@@ -10,6 +10,7 @@
  "engine": "InnoDB",
  "field_order": [
   "name_and_employee_id",
+  "z_sales_person_code",
   "sales_person_name",
   "parent_sales_person",
   "commission_rate",
@@ -146,12 +147,18 @@
    "fieldname": "z_company_code",
    "fieldtype": "Data",
    "label": "Z Company Code"
+  },
+  {
+   "fieldname": "z_sales_person_code",
+   "fieldtype": "Data",
+   "label": "Z Sales Person Code",
+   "reqd": 1
   }
  ],
  "icon": "icon-user",
  "idx": 1,
  "links": [],
- "modified": "2020-06-04 13:20:26.219786",
+ "modified": "2020-06-16 11:15:08.884794",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Sales Person",

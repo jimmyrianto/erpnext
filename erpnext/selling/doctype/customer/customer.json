@@ -14,7 +14,9 @@
   "naming_series",
   "salutation",
   "customer_name",
+  "alias_name",
   "company",
+  "z_company_code",
   "z_customer_ax",
   "gender",
   "customer_type",
@@ -37,6 +39,12 @@
   "default_price_list",
   "column_break_14",
   "language",
+  "master_group_section",
+  "location",
+  "chain",
+  "z_column_break_1",
+  "channel",
+  "group_customer_section",
   "address_contacts",
   "address_html",
   "website",
@@ -68,7 +76,11 @@
   "default_commission_rate",
   "sales_team_section",
   "sales_team",
-  "customer_pos_id"
+  "customer_pos_id",
+  "npwp",
+  "nama_npwp",
+  "alamat_npwp",
+  "kota_npwp"
  ],
  "fields": [
   {
@@ -81,6 +93,7 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Series",
    "no_copy": 1,
    "options": "z_company_code..####",
@@ -160,8 +173,6 @@
   {
    "fieldname": "customer_group",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Customer Group",
    "oldfieldname": "customer_group",
    "oldfieldtype": "Link",
@@ -172,8 +183,6 @@
   {
    "fieldname": "territory",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Territory",
    "oldfieldname": "territory",
    "oldfieldtype": "Link",
@@ -226,7 +235,6 @@
    "options": "Allowed To Transact With"
   },
   {
-   "collapsible": 1,
    "fieldname": "currency_and_price_list",
    "fieldtype": "Section Break",
    "label": "Currency and Price List"
@@ -237,14 +245,16 @@
    "ignore_user_permissions": 1,
    "label": "Billing Currency",
    "no_copy": 1,
-   "options": "Currency"
+   "options": "Currency",
+   "reqd": 1
   },
   {
    "fieldname": "default_price_list",
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
    "label": "Default Price List",
-   "options": "Price List"
+   "options": "Price List",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_14",
@@ -342,7 +352,6 @@
    "options": "Party Account"
   },
   {
-   "collapsible": 1,
    "fieldname": "credit_limit_section",
    "fieldtype": "Section Break",
    "label": "Credit Limit and Payment Terms"
@@ -351,7 +360,8 @@
    "fieldname": "payment_terms",
    "fieldtype": "Link",
    "label": "Default Payment Terms Template",
-   "options": "Payment Terms Template"
+   "options": "Payment Terms Template",
+   "reqd": 1
   },
   {
    "collapsible": 1,
@@ -438,7 +448,6 @@
    "oldfieldtype": "Currency"
   },
   {
-   "collapsible": 1,
    "collapsible_depends_on": "sales_team",
    "fieldname": "sales_team_section",
    "fieldtype": "Section Break",
@@ -450,7 +459,8 @@
    "label": "Sales Team Details",
    "oldfieldname": "sales_team",
    "oldfieldtype": "Table",
-   "options": "Sales Team"
+   "options": "Sales Team",
+   "reqd": 1
   },
   {
    "fieldname": "customer_pos_id",
@@ -466,105 +476,102 @@
    "fieldname": "credit_limits",
    "fieldtype": "Table",
    "label": "Credit Limit",
-   "options": "Customer Credit Limit"
+   "options": "Customer Credit Limit",
+   "reqd": 1
   },
   {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "reqd": 1
   },
   {
    "fieldname": "z_customer_ax",
    "fieldtype": "Data",
-   "label": "Z Customer AX",
+   "label": "Z Customer AX"
+  },
+  {
+   "fieldname": "alias_name",
+   "fieldtype": "Data",
+   "label": "Alias Name"
+  },
+  {
+   "fieldname": "npwp",
+   "fieldtype": "Data",
+   "label": "NPWP",
    "reqd": 1
+  },
+  {
+   "fieldname": "nama_npwp",
+   "fieldtype": "Data",
+   "label": "Nama NPWP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "alamat_npwp",
+   "fieldtype": "Data",
+   "label": "Alamat NPWP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kota_npwp",
+   "fieldtype": "Data",
+   "label": "Kota NPWP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "PASAR\nNON PASAR"
+  },
+  {
+   "fieldname": "group_customer_section",
+   "fieldtype": "Section Break",
+   "label": "Group Customer"
+  },
+  {
+   "fieldname": "master_group_section",
+   "fieldtype": "Section Break",
+   "label": "Master Group"
+  },
+  {
+   "default": "INDEPENDENT",
+   "fieldname": "chain",
+   "fieldtype": "Select",
+   "label": "Chain",
+   "options": "INDEPENDENT\nLOCAL\nREGIONAL\nNATIONAL"
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Channel",
+   "options": "Channel"
+  },
+  {
+   "fieldname": "z_column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "company.z_company_code",
+   "fieldname": "z_company_code",
+   "fieldtype": "Data",
+   "label": "Z Company Code"
   }
  ],
  "icon": "fa fa-user",
  "idx": 363,
  "image_field": "image",
  "links": [],
- "modified": "2020-06-04 11:28:54.373814",
+ "modified": "2020-06-17 19:17:00.955784",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",
  "name_case": "Title Case",
  "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales User",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "permlevel": 1,
-   "read": 1,
-   "role": "Sales User"
-  },
-  {
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales Manager"
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "import": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales Master Manager",
-   "set_user_permissions": 1,
-   "share": 1,
-   "write": 1
-  },
-  {
-   "permlevel": 1,
-   "read": 1,
-   "role": "Sales Master Manager",
-   "write": 1
-  },
-  {
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Stock User"
-  },
-  {
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Stock Manager"
-  },
-  {
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Accounts User"
-  },
-  {
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Accounts Manager"
-  }
- ],
- "quick_entry": 1,
- "search_fields": "customer_name,customer_group,territory, mobile_no,primary_address",
+ "permissions": [],
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "ASC",
