@@ -62,6 +62,7 @@
   "credit_limit_section",
   "payment_terms",
   "credit_limits",
+  "max_overdue_invoice",
   "more_info",
   "customer_details",
   "column_break_45",
@@ -559,13 +560,19 @@
    "fieldname": "z_company_code",
    "fieldtype": "Data",
    "label": "Z Company Code"
+  },
+  {
+   "fieldname": "max_overdue_invoice",
+   "fieldtype": "Data",
+   "label": "Max Overdue Invoice",
+   "reqd": 1
   }
  ],
  "icon": "fa fa-user",
  "idx": 363,
  "image_field": "image",
  "links": [],
- "modified": "2020-06-17 19:17:00.955784",
+ "modified": "2020-06-22 11:57:17.284496",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",

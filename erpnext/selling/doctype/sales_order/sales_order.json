@@ -596,7 +596,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "Indonesia Tax",
    "fieldname": "taxes_and_charges",
    "fieldtype": "Link",
    "label": "Sales Taxes and Charges Template",
@@ -1203,7 +1202,7 @@
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-06-21 14:15:02.513826",
+ "modified": "2020-06-22 11:48:46.178263",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Sales Order",
