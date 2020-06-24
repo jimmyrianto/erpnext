@@ -19,10 +19,15 @@
   "cb0",
   "employee",
   "department",
+  "company",
   "z_company_code",
   "lft",
   "rgt",
   "old_parent",
+  "z_section_break13",
+  "sales_force",
+  "z_column_break_15",
+  "sales_team",
   "target_details_section_break",
   "targets"
  ],
@@ -153,12 +158,46 @@
    "fieldtype": "Data",
    "label": "Z Sales Person Code",
    "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "z_section_break13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sales_force",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sales Force",
+   "options": "Sales Person Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "z_column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_team",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sales Team",
+   "options": "ALL\nCONFECTIONERY\nNOODLE\nSNACK",
+   "reqd": 1
   }
  ],
  "icon": "icon-user",
  "idx": 1,
  "links": [],
- "modified": "2020-06-16 11:15:08.884794",
+ "modified": "2020-06-24 09:09:03.838511",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Sales Person",
