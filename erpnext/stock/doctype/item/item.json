@@ -36,6 +36,7 @@
   "image",
   "section_break_11",
   "brand",
+  "subbrand",
   "description",
   "sb_barcodes",
   "barcodes",
@@ -1037,6 +1038,12 @@
    "fieldname": "auto_create_assets",
    "fieldtype": "Check",
    "label": "Auto Create Assets on Purchase"
+  },
+  {
+   "fieldname": "subbrand",
+   "fieldtype": "Data",
+   "label": "Sub Brand",
+   "options": "Sub Brand"
   }
  ],
  "has_web_view": 1,
@@ -1045,7 +1052,7 @@
  "image_field": "image",
  "links": [],
  "max_attachments": 1,
- "modified": "2020-01-02 19:13:59.295963",
+ "modified": "2020-06-25 11:33:21.802336",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Item",
