@@ -1056,13 +1056,14 @@
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-06-04 10:58:00.799323",
+ "modified": "2020-06-24 18:55:22.156306",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Purchase Order",
  "owner": "Administrator",
  "permissions": [
   {
+   "export": 1,
    "read": 1,
    "report": 1,
    "role": "Stock User"
@@ -1073,6 +1074,8 @@
    "create": 1,
    "delete": 1,
    "email": 1,
+   "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
