@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "field:subbrand",
+ "creation": "2020-04-28 15:38:47.239942",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sbu",
+  "umbrella",
+  "brand",
+  "parent_sku",
+  "subbrand"
+ ],
+ "fields": [
+  {
+   "fieldname": "sbu",
+   "fieldtype": "Select",
+   "label": "SBU",
+   "options": "CONFECTIONERY\nNOODLE"
+  },
+  {
+   "fieldname": "umbrella",
+   "fieldtype": "Select",
+   "label": "Umbrella",
+   "options": "MILKITA\nLEMONILO"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand"
+  },
+  {
+   "fieldname": "parent_sku",
+   "fieldtype": "Select",
+   "label": "Parent SKU",
+   "options": "MILKITA KENTAL MANIS BAG\nLEMONILO MIE GORENG\nLEMONILO MIE KARI\nLEMONILO MIE BAWANG"
+  },
+  {
+   "fieldname": "subbrand",
+   "fieldtype": "Data",
+   "label": "Subbrand",
+   "unique": 1
+  }
+ ],
+ "links": [],
+ "modified": "2020-06-25 11:14:28.719887",
+ "modified_by": "Administrator",
+ "module": "Selling",
+ "name": "Sub Brand",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

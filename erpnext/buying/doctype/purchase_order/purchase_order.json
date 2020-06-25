@@ -187,18 +187,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "company",
-   "fieldtype": "Link",
-   "in_standard_filter": 1,
-   "label": "Company",
-   "oldfieldname": "company",
-   "oldfieldtype": "Link",
-   "options": "Company",
-   "print_hide": 1,
-   "remember_last_selected_value": 1,
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break1",
    "fieldtype": "Column Break",
    "oldfieldtype": "Column Break",
@@ -1050,19 +1038,28 @@
    "fieldtype": "Link",
    "label": "Set Reserve Warehouse",
    "options": "Warehouse"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-06-04 10:58:00.799323",
+ "modified": "2020-06-25 10:13:04.647237",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Purchase Order",
  "owner": "Administrator",
  "permissions": [
   {
+   "export": 1,
    "read": 1,
    "report": 1,
    "role": "Stock User"
@@ -1073,6 +1070,8 @@
    "create": 1,
    "delete": 1,
    "email": 1,
+   "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
