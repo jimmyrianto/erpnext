@@ -34,9 +34,11 @@
   "over_delivery_receipt_allowance",
   "over_billing_allowance",
   "image",
-  "section_break_11",
+  "sec_break_001",
   "brand",
+  "col_break_001",
   "subbrand",
+  "section_break_11",
   "description",
   "sb_barcodes",
   "barcodes",
@@ -1041,9 +1043,17 @@
   },
   {
    "fieldname": "subbrand",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Sub Brand",
    "options": "Sub Brand"
+  },
+  {
+   "fieldname": "sec_break_001",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "col_break_001",
+   "fieldtype": "Column Break"
   }
  ],
  "has_web_view": 1,
@@ -1052,7 +1062,7 @@
  "image_field": "image",
  "links": [],
  "max_attachments": 1,
- "modified": "2020-06-25 11:33:21.802336",
+ "modified": "2020-06-26 12:53:23.135298",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Item",
