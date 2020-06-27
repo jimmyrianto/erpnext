@@ -14,7 +14,6 @@
   "naming_series",
   "salutation",
   "customer_name",
-  "alias_name",
   "company",
   "z_company_code",
   "z_customer_ax",
@@ -493,11 +492,6 @@
    "label": "Z Customer AX"
   },
   {
-   "fieldname": "alias_name",
-   "fieldtype": "Data",
-   "label": "Alias Name"
-  },
-  {
    "fieldname": "npwp",
    "fieldtype": "Data",
    "label": "NPWP",
@@ -572,7 +566,7 @@
  "idx": 363,
  "image_field": "image",
  "links": [],
- "modified": "2020-06-22 11:57:17.284496",
+ "modified": "2020-06-27 17:27:35.403970",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",

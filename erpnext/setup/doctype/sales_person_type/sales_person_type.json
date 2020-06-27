@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "autoname": "field:sales_person_type_name",
+ "creation": "2020-05-05 14:59:15.625256",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_type",
+  "z_kode_sales_force",
+  "sales_person_type_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "sales_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Sales Type",
+   "options": "TAKING ORDER\nCANVAS\nOTHERS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "z_kode_sales_force",
+   "fieldtype": "Data",
+   "label": "Z Kode Sales Force",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_person_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sales Person Type Name",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "links": [],
+ "modified": "2020-06-27 17:53:28.521062",
+ "modified_by": "Administrator",
+ "module": "Setup",
+ "name": "Sales Person Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
