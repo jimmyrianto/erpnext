@@ -17,13 +17,13 @@
    "fieldname": "sbu",
    "fieldtype": "Select",
    "label": "SBU",
-   "options": "CONFECTIONERY\nNOODLE"
+   "options": "CONFECTIONERY\nNOODLE\nSNACK\nBUMBU"
   },
   {
    "fieldname": "umbrella",
    "fieldtype": "Select",
    "label": "Umbrella",
-   "options": "MILKITA\nLEMONILO"
+   "options": "MILKITA\nLEMONILO\nCHILITA"
   },
   {
    "fieldname": "brand",
@@ -35,7 +35,7 @@
    "fieldname": "parent_sku",
    "fieldtype": "Select",
    "label": "Parent SKU",
-   "options": "MILKITA KENTAL MANIS BAG\nLEMONILO MIE GORENG\nLEMONILO MIE KARI\nLEMONILO MIE BAWANG"
+   "options": "MILKITA KENTAL MANIS BAG\nLEMONILO MIE GORENG\nLEMONILO MIE KARI\nLEMONILO MIE BAWANG\nLEMONILO CHIMI KERIPIK\nCHILITA TABUR"
   },
   {
    "fieldname": "subbrand",
@@ -45,7 +45,7 @@
   }
  ],
  "links": [],
- "modified": "2020-06-25 11:16:20.370777",
+ "modified": "2020-06-29 13:42:34.313212",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Sub Brand",
