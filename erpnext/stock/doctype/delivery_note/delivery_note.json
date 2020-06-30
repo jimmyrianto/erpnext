@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "naming_series:",
+ "autoname": "field:z_dn_ax",
  "creation": "2013-05-24 19:29:09",
  "doctype": "DocType",
  "document_type": "Document",
@@ -13,6 +13,7 @@
   "naming_series",
   "customer",
   "customer_name",
+  "z_dn_ax",
   "column_break1",
   "amended_from",
   "company",
@@ -1257,14 +1258,20 @@
    "fieldname": "z_company_code",
    "fieldtype": "Data",
    "label": "Z Company Code"
+  },
+  {
+   "fieldname": "z_dn_ax",
+   "fieldtype": "Data",
+   "label": "Z Delivery Note AX",
+   "unique": 1
   }
  ],
  "icon": "fa fa-truck",
  "idx": 146,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-06-03 08:10:09.221293",
- "modified_by": "yogi.f@unitedfamilyfood.com",
+ "modified": "2020-06-30 17:18:55.173180",
+ "modified_by": "Administrator",
  "module": "Stock",
  "name": "Delivery Note",
  "owner": "Administrator",

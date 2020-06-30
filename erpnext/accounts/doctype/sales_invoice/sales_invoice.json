@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "naming_series:",
+ "autoname": "field:z_si_ax",
  "creation": "2013-05-24 19:29:05",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,6 +11,7 @@
   "naming_series",
   "customer",
   "customer_name",
+  "z_si_ax",
   "tax_id",
   "is_pos",
   "pos_profile",
@@ -1580,14 +1581,20 @@
    "fieldname": "z_company_code",
    "fieldtype": "Data",
    "label": "Z Company Code"
+  },
+  {
+   "fieldname": "z_si_ax",
+   "fieldtype": "Data",
+   "label": "Z Sales Invoice AX",
+   "unique": 1
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 181,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-06-03 08:11:58.761114",
- "modified_by": "yogi.f@unitedfamilyfood.com",
+ "modified": "2020-06-30 17:20:18.589712",
+ "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",
  "name_case": "Title Case",
