@@ -108,7 +108,7 @@ def build_forest(data):
 	error_messages = []
 
 	for i in data:
-		account_name, _, account_number, is_group, account_type, root_type = i
+		account_name, dummy, account_number, is_group, account_type, root_type = i
 
 		if not account_name:
 			error_messages.append("Row {0}: Please enter Account Name".format(line_no))
@@ -193,8 +193,9 @@ def validate_account_types(accounts):
 	account_groups = [accounts[d]["account_type"] for d in accounts if accounts[d]['is_group'] == 1]
 
 	missing = list(set(account_types_for_group) - set(account_groups))
-	if missing:
-		return _("Please identify/create Account (Group) for type - {0}").format(' , '.join(missing))
+	#return _(accounts[0])
+	#if missing:
+	#	return _("Please identify/create Account (Group) for type - {0}").format(' , '.join(missing))
 
 def unset_existing_data(company):
 	linked = frappe.db.sql('''select fieldname from tabDocField
