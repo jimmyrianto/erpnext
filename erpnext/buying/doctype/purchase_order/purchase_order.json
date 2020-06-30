@@ -15,6 +15,7 @@
   "supplier_name",
   "column_break1",
   "company",
+  "z_company_code",
   "transaction_date",
   "schedule_date",
   "order_confirmation_no",
@@ -1046,13 +1047,19 @@
    "label": "Company",
    "options": "Company",
    "reqd": 1
+  },
+  {
+   "fetch_from": "company.z_company_code",
+   "fieldname": "z_company_code",
+   "fieldtype": "Data",
+   "label": "Z Company Code"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-06-25 10:13:04.647237",
+ "modified": "2020-06-30 11:33:36.909517",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Purchase Order",
