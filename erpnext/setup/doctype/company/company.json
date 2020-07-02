@@ -12,6 +12,7 @@
   "details",
   "company_name",
   "z_company_code",
+  "rekening",
   "abbr",
   "change_abbr",
   "is_group",
@@ -728,13 +729,18 @@
    "fieldtype": "Data",
    "label": "Z Company Code",
    "reqd": 1
+  },
+  {
+   "fieldname": "rekening",
+   "fieldtype": "Data",
+   "label": "Rekening"
   }
  ],
  "icon": "fa fa-building",
  "idx": 1,
  "image_field": "company_logo",
  "links": [],
- "modified": "2020-06-22 15:02:06.363075",
+ "modified": "2020-07-02 20:38:01.621368",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Company",
