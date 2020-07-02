@@ -13,6 +13,8 @@
   "company_name",
   "z_company_code",
   "rekening",
+  "text1",
+  "text2",
   "abbr",
   "change_abbr",
   "is_group",
@@ -734,13 +736,23 @@
    "fieldname": "rekening",
    "fieldtype": "Data",
    "label": "Rekening"
+  },
+  {
+   "fieldname": "text1",
+   "fieldtype": "Data",
+   "label": "Text"
+  },
+  {
+   "fieldname": "text2",
+   "fieldtype": "Data",
+   "label": "Text 2"
   }
  ],
  "icon": "fa fa-building",
  "idx": 1,
  "image_field": "company_logo",
  "links": [],
- "modified": "2020-07-02 20:38:01.621368",
+ "modified": "2020-07-02 20:49:18.226995",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Company",
