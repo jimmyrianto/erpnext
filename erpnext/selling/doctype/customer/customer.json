@@ -188,7 +188,8 @@
    "oldfieldtype": "Link",
    "options": "Territory",
    "print_hide": 1,
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "tax_id",
@@ -566,7 +567,7 @@
  "idx": 363,
  "image_field": "image",
  "links": [],
- "modified": "2020-06-27 17:27:35.403970",
+ "modified": "2020-07-03 17:08:07.327016",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",
