@@ -40,8 +40,9 @@
   "language",
   "master_group_section",
   "location",
-  "chain",
+  "pasar",
   "z_column_break_1",
+  "chain",
   "channel",
   "group_customer_section",
   "address_contacts",
@@ -561,13 +562,20 @@
    "fieldtype": "Data",
    "label": "Max Overdue Invoice",
    "reqd": 1
+  },
+  {
+   "fieldname": "pasar",
+   "fieldtype": "Link",
+   "label": "Pasar",
+   "options": "Pasar",
+   "reqd": 1
   }
  ],
  "icon": "fa fa-user",
  "idx": 363,
  "image_field": "image",
  "links": [],
- "modified": "2020-07-03 17:08:07.327016",
+ "modified": "2020-07-04 12:31:43.178728",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",
