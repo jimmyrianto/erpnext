@@ -14,6 +14,7 @@
   "naming_series",
   "customer",
   "z_so_ax",
+  "pasar",
   "customer_name",
   "order_type",
   "skip_delivery_note",
@@ -1203,13 +1204,19 @@
    "fieldtype": "Data",
    "label": "Z Sales Order AX",
    "unique": 1
+  },
+  {
+   "fetch_from": "customer.pasar",
+   "fieldname": "pasar",
+   "fieldtype": "Data",
+   "label": "Pasar"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-07-01 16:06:13.769665",
+ "modified": "2020-07-05 21:02:13.138106",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Sales Order",

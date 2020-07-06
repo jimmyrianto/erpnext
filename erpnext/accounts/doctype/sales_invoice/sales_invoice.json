@@ -11,6 +11,7 @@
   "naming_series",
   "customer",
   "customer_name",
+  "pasar",
   "z_si_ax",
   "tax_id",
   "is_pos",
@@ -1587,13 +1588,19 @@
    "fieldtype": "Data",
    "label": "Z Sales Invoice AX",
    "unique": 1
+  },
+  {
+   "fetch_from": "customer.pasar",
+   "fieldname": "pasar",
+   "fieldtype": "Data",
+   "label": "Pasar"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 181,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-07-01 19:55:06.482712",
+ "modified": "2020-07-05 21:03:55.410280",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",
