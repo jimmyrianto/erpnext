@@ -16,7 +16,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Division",
-   "options": "GT\nMT\nHORECA\nOTHERS",
+   "options": "GT\nMT\nHORECA\nOTHERS\nRESELLER",
    "reqd": 1
   },
   {
@@ -29,7 +29,7 @@
   }
  ],
  "links": [],
- "modified": "2020-06-17 14:08:57.966657",
+ "modified": "2020-07-06 14:37:49.955638",
  "modified_by": "Administrator",
  "module": "CRM",
  "name": "Channel",
@@ -50,6 +50,5 @@
  ],
  "quick_entry": 1,
  "sort_field": "modified",
- "sort_order": "DESC",
- "track_changes": 1
+ "sort_order": "DESC"
 }
