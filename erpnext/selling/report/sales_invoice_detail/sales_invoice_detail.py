@@ -43,9 +43,9 @@ def execute(filters=None):
 	si = frappe.db.get_list('Sales Invoice',
 		fields=['*'],
 		filters = {
-			'company': filters.get("company"),
-			'posting_date': ['>=', filters.get("date_from")],
-			'posting_date': ['<=', filters.get("date_to")]
+			'company': str(filters.get("company")),
+			'posting_date': ['between', [str(filters.get("date_from")), str(filters.get("date_to"))]]
+#			'posting_date': ['<', str(filters.get("date_to"))]
 		}
 	)
 	sii = frappe.db.get_list('Sales Invoice Item',
@@ -136,6 +136,8 @@ def execute(filters=None):
 				)
 
 				datas.append(data)
+
+#	datas.append([len(si)])
 
 	# return data
 	return columns, datas
