@@ -75,9 +75,9 @@ def execute(filters=None):
 	dynamic_link = frappe.db.get_list('Dynamic Link',
 		fields = ['*'],
 		filters = {
-			'link_doctype': 'Company',
+			'link_doctype': 'Customer',
 			'parenttype': 'Address',
-			'link_name': ['in', [d.company for d in si]]
+			'link_name': ['in', [d.customer for d in si]]
 		}
 	)
 	address = frappe.db.get_list('Address',
@@ -115,11 +115,11 @@ def execute(filters=None):
 					si[i].company, 
 					find_address_country_by_name(
 						address,
-						find_dynamiclink_parent_by_linkname(dynamic_link, si[i].company)
+						find_dynamiclink_parent_by_linkname(dynamic_link, si[i].customer)
 					),
 					find_address_city_by_name(
 						address,
-						find_dynamiclink_parent_by_linkname(dynamic_link, si[i].company)
+						find_dynamiclink_parent_by_linkname(dynamic_link, si[i].customer)
 					),
 					si[i].pasar
 				]
@@ -165,7 +165,7 @@ def find_dynamiclink_parent_by_linkname(arr, linkname):
 def find_address_country_by_name(arr, name):
 	for x in arr:
 		if x.name == name:
-			return x.country
+			return x.address_line1
 
 def find_address_city_by_name(arr, name):
 	for x in arr:
@@ -177,4 +177,5 @@ def week_of_month(dt):
 	dom = dt.day
 	adjusted_dom = dom + first_day.weekday()
 	return int(ceil(adjusted_dom/7.0))
+
 
