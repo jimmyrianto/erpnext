@@ -17,13 +17,13 @@
    "fieldname": "sbu",
    "fieldtype": "Select",
    "label": "SBU",
-   "options": "CONFECTIONERY\nNOODLE\nSNACK\nBUMBU"
+   "options": "CONFECTIONERY\nNOODLE\nSNACK\nBUMBU\nHAND SANITIZER"
   },
   {
    "fieldname": "umbrella",
    "fieldtype": "Select",
    "label": "Umbrella",
-   "options": "MILKITA\nLEMONILO\nCHILITA"
+   "options": "MILKITA\nLEMONILO\nCHILITA\nHAND SANITIZER"
   },
   {
    "fieldname": "brand",
@@ -35,7 +35,7 @@
    "fieldname": "parent_sku",
    "fieldtype": "Select",
    "label": "Parent SKU",
-   "options": "MILKITA KENTAL MANIS BAG\nLEMONILO MIE GORENG\nLEMONILO MIE KARI\nLEMONILO MIE BAWANG\nLEMONILO CHIMI KERIPIK\nCHILITA TABUR"
+   "options": "MILKITA KENTAL MANIS BAG\nLEMONILO MIE GORENG\nLEMONILO MIE KARI\nLEMONILO MIE BAWANG\nLEMONILO CHIMI KERIPIK\nCHILITA TABUR\nLEMONILO NATURIZER\nUNIFAM HS SPRAY"
   },
   {
    "fieldname": "subbrand",
@@ -45,7 +45,7 @@
   }
  ],
  "links": [],
- "modified": "2020-06-29 13:42:34.313212",
+ "modified": "2020-07-08 10:31:01.358667",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Sub Brand",
