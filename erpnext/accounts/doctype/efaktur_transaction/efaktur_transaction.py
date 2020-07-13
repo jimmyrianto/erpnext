@@ -222,21 +222,29 @@ def export_efaktur(efaktur_transaction_id):
 		for j in range(len(si)):
 			if si[j].name == eft[i].sales_invoice:
 				items = []
+				discount = si[j].discount_amount / si[j].total_qty
+				total_dpp = 0
+				total_ppn = 0
 				for k in range(len(sii)):
 					if sii[k].parent == si[j].name:
+						amount = sii[k].price_list_rate*sii[k].qty
+						diskon = sii[k].qty * (discount + sii[k].discount_amount)
+						dpp = amount - diskon
+						ppn = dpp / 10
+						total_dpp = total_dpp + dpp
+						total_ppn = total_ppn + ppn
 						items.append(
 							[
 								'OF',sii[k].item_code,sii[k].item_name,sii[k].price_list_rate,
-								sii[k].qty,str(sii[k].price_list_rate*sii[k].qty),
-								'diskon','dpp','ppn','0','0','','','','','','','',''
+								sii[k].qty,str(amount),str(diskon),str(dpp),str(ppn),'0','0','',
+								'','','','','','',''
 							]
 						)
 				columns.append(
 					[
 						'FK','01','0',eft[i].efaktur_id,'1','2020',eft[i].efaktur_date,'npwp',
 						si[j].customer_name,find_address_by_name(addcust, si[j].customer_address),
-						'0',
-						'jumlah ppn','0','','0',
+						str(total_dpp),str(total_ppn),'0','','0',
 						'0','0','0',si[j].name
 					]
 				) 
