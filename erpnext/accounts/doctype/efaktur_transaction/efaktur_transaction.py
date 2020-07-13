@@ -239,7 +239,7 @@ def export_efaktur(efaktur_transaction_id):
 						'jumlah ppn','0','','0',
 						'0','0','0',si[j].name
 					]
-				)
+				) 
 				columns.append(
 					[
 						'FAPR',company_name,company_address,'','','','','','','','','',
