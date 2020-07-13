@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "creation": "2020-07-09 15:24:32.666364",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_invoice",
+  "efaktur_id",
+  "efaktur_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "efaktur_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Faktur ID",
+   "options": "EFaktur",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "efaktur_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Faktur Date",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-07-10 11:14:46.975486",
+ "modified_by": "Administrator",
+ "module": "Selling",
+ "name": "EFaktur Transaction Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
