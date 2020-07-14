@@ -89,8 +89,12 @@ def execute(filters=None):
 
 	# process data
 	for i in range(len(si)):
+		discount = si[i].discount_amount / si[i].total_qty
 		for j in range(len(sii)):
 			if si[i].name == sii[j].parent:
+				price_list = round_based_on_smallest_currency_fraction((sii[j].price_list_rate * 1.1), 'IDR', 0)
+				diskon = round_based_on_smallest_currency_fraction(((discount + sii[k].discount_amount) * 1.1), 'IDR', 0)
+				amount = round_based_on_smallest_currency_fraction(((price_list - diskon)*sii[k].qty), 'IDR', 0)
 				data = [
 					si[i].name,
 					si[i].title,
@@ -104,9 +108,12 @@ def execute(filters=None):
 					si[i].currency,
 					si[i].payment_terms_template,
 					sii[j].qty,
-					round_based_on_smallest_currency_fraction((sii[j].price_list_rate * 1.1), 'IDR', 0),
-					round_based_on_smallest_currency_fraction((sii[j].discount_amount * 1.1), 'IDR', 0),
-					round_based_on_smallest_currency_fraction((sii[j].amount * 1.1), 'IDR', 0),
+					price_list,
+					diskon,
+					amount,
+					# round_based_on_smallest_currency_fraction((sii[j].price_list_rate * 1.1), 'IDR', 0),
+					# round_based_on_smallest_currency_fraction((sii[j].discount_amount * 1.1), 'IDR', 0),
+					# round_based_on_smallest_currency_fraction((sii[j].amount * 1.1), 'IDR', 0),
 					'', #type
 					sii[j].item_code,
 					sii[j].item_name,
