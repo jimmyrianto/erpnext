@@ -93,8 +93,8 @@ def execute(filters=None):
 		for j in range(len(sii)):
 			if si[i].name == sii[j].parent:
 				price_list = round_based_on_smallest_currency_fraction((sii[j].price_list_rate * 1.1), 'IDR', 0)
-				diskon = round_based_on_smallest_currency_fraction(((discount + sii[k].discount_amount) * 1.1), 'IDR', 0)
-				amount = round_based_on_smallest_currency_fraction(((price_list - diskon)*sii[k].qty), 'IDR', 0)
+				diskon = round_based_on_smallest_currency_fraction(((discount + sii[j].discount_amount) * 1.1), 'IDR', 0)
+				amount = round_based_on_smallest_currency_fraction(((price_list - diskon)*sii[j].qty), 'IDR', 0)
 				data = [
 					si[i].name,
 					si[i].title,
