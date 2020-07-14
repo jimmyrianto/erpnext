@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "creation": "2020-07-03 13:49:51.458088",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_order",
+  "delivery_note",
+  "sales_invoice",
+  "data_4"
+ ],
+ "fields": [
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Order",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "delivery_note",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Delivery Note",
+   "options": "Delivery Note"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "data_4",
+   "fieldtype": "Data"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-07-03 17:03:53.561236",
+ "modified_by": "Administrator",
+ "module": "Selling",
+ "name": "Sales Processing Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

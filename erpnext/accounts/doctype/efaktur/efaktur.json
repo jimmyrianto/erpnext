@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "autoname": "field:efaktur_id",
+ "creation": "2020-07-08 11:14:50.607013",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "efaktur_id",
+  "is_used",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "efaktur_id",
+   "fieldtype": "Data",
+   "label": "EFaktur",
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_used",
+   "fieldtype": "Check",
+   "label": "Is Used"
+  }
+ ],
+ "links": [],
+ "modified": "2020-07-09 14:23:17.374764",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "EFaktur",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

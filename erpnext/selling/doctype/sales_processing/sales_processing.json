@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2020-07-03 13:05:52.184868",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date_from",
+  "date_to",
+  "button_get_data",
+  "col_break_001",
+  "company",
+  "sec_break_001",
+  "sales_processing_item",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "no_copy": 1,
+   "options": "SOP..YY..MM.-.#####",
+   "print_hide": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "date_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_to",
+   "fieldtype": "Date",
+   "label": "Date To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_001",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_processing_item",
+   "fieldtype": "Table",
+   "label": "Sales Processing Item",
+   "options": "Sales Processing Item"
+  },
+  {
+   "fieldname": "sec_break_001",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sales Processing",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "button_get_data",
+   "fieldtype": "Button",
+   "label": "Get Data"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2020-07-03 15:13:00.910437",
+ "modified_by": "Administrator",
+ "module": "Selling",
+ "name": "Sales Processing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
