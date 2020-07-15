@@ -532,7 +532,10 @@ erpnext.TransactionController = erpnext.taxes_and_totals.extend({
 									}
 								},
 								() => me.conversion_factor(doc, cdt, cdn, true),
-								() => me.remove_pricing_rule(item)
+								() => me.remove_pricing_rule(item),
+								// change by jr 20200715 (fix bug mix pricing rule)
+								() => me.apply_pricing_rule(item)
+								// end change by jr 20200715 (fix bug mix pricing rule)
 							]);
 						}
 					}
@@ -1051,6 +1054,10 @@ erpnext.TransactionController = erpnext.taxes_and_totals.extend({
 		var me = this;
 		this.frm.doc.total_net_weight= 0.0;
 
+		// change by jr 20200715 (fix bug mix pricing rule)
+		me.apply_pricing_rule()
+		// end change by jr 20200715 (fix bug mix pricing rule)
+
 		$.each(this.frm.doc["items"] || [], function(i, item) {
 			me.frm.doc.total_net_weight += flt(item.total_weight);
 		});
@@ -1233,24 +1240,47 @@ erpnext.TransactionController = erpnext.taxes_and_totals.extend({
 	},
 
 	apply_pricing_rule: function(item, calculate_taxes_and_totals) {
-		var me = this;
-		var args = this._get_args(item);
-		if (!(args.items && args.items.length)) {
-			if(calculate_taxes_and_totals) me.calculate_taxes_and_totals();
-			return;
-		}
+		// change by jr 20200715 (fix bug mix pricing rule)
+		// var me = this;
+		// var args = this._get_args(item);
+		// if (!(args.items && args.items.length)) {
+		// 	if(calculate_taxes_and_totals) me.calculate_taxes_and_totals();
+		// 	return;
+		// }
 
-		return this.frm.call({
-			method: "erpnext.accounts.doctype.pricing_rule.pricing_rule.apply_pricing_rule",
-			args: {	args: args, doc: me.frm.doc },
-			callback: function(r) {
-				if (!r.exc && r.message) {
-					me._set_values_for_item_list(r.message);
-					if(item) me.set_gross_profit(item);
-					if(me.frm.doc.apply_discount_on) me.frm.trigger("apply_discount_on")
-				}
+		// return this.frm.call({
+		// 	method: "erpnext.accounts.doctype.pricing_rule.pricing_rule.apply_pricing_rule",
+		// 	args: {	args: args, doc: me.frm.doc },
+		// 	callback: function(r) {
+		// 		if (!r.exc && r.message) {
+		// 			me._set_values_for_item_list(r.message);
+		// 			if(item) me.set_gross_profit(item);
+		// 			if(me.frm.doc.apply_discount_on) me.frm.trigger("apply_discount_on")
+		// 		}
+		// 	}
+		// });
+
+		var me = this;
+		me.frm.doc.items.forEach(d => {
+			var args = this._get_args(d);
+			if (!(args.items && args.items.length)) {
+				if(calculate_taxes_and_totals) me.calculate_taxes_and_totals();
+				return;
 			}
+	
+			this.frm.call({
+				method: "erpnext.accounts.doctype.pricing_rule.pricing_rule.apply_pricing_rule",
+				args: {	args: args, doc: me.frm.doc },
+				callback: function(r) {
+					if (!r.exc && r.message) {
+						me._set_values_for_item_list(r.message);
+						if(item) me.set_gross_profit(item);
+						if(me.frm.doc.apply_discount_on) me.frm.trigger("apply_discount_on")
+					}
+				}
+			});
 		});
+		// end change by jr 20200715 (fix bug mix pricing rule)
 	},
 
 	_get_args: function(item) {
@@ -1365,22 +1395,24 @@ erpnext.TransactionController = erpnext.taxes_and_totals.extend({
 	},
 
 	apply_rule_on_other_items: function(args) {
-		const me = this;
-		const fields = ["discount_percentage", "discount_amount", "rate"];
+		// change by jr 20200715 (fix bug mix pricing rule)
+		// const me = this;
+		// const fields = ["discount_percentage", "discount_amount", "rate"];
 
-		for(var k in args) {
-			let data = args[k];
+		// for(var k in args) {
+		// 	let data = args[k];
 
-			me.frm.doc.items.forEach(d => {
-				if (in_list(data.apply_rule_on_other_items, d[data.apply_rule_on])) {
-					for(var k in data) {
-						if (in_list(fields, k)) {
-							frappe.model.set_value(d.doctype, d.name, k, data[k]);
-						}
-					}
-				}
-			});
-		}
+		// 	me.frm.doc.items.forEach(d => {
+		// 		if (in_list(data.apply_rule_on_other_items, d[data.apply_rule_on])) {
+		// 			for(var k in data) {
+		// 				if (in_list(fields, k)) {
+		// 					frappe.model.set_value(d.doctype, d.name, k, data[k]);
+		// 				}
+		// 			}
+		// 		}
+		// 	});
+		// }
+		// end change by jr 20200715 (fix bug mix pricing rule)
 	},
 
 	apply_product_discount: function(free_item_data) {
