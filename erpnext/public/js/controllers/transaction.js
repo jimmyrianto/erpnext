@@ -529,7 +529,7 @@ erpnext.TransactionController = erpnext.taxes_and_totals.extend({
 										erpnext.show_serial_batch_selector(me.frm, d, (item) => {
 											me.frm.script_manager.trigger('qty', item.doctype, item.name);
 										});
-									}
+									} 
 								},
 								() => me.conversion_factor(doc, cdt, cdn, true),
 								() => me.remove_pricing_rule(item),
