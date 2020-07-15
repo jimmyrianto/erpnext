@@ -533,7 +533,7 @@ erpnext.TransactionController = erpnext.taxes_and_totals.extend({
 								},
 								() => me.conversion_factor(doc, cdt, cdn, true),
 								() => me.remove_pricing_rule(item),
-								// change by jr 20200715 (fix bug mix pricing rule)
+								// change by jr 20200715 (fix bug mix pricing rule) 
 								() => me.apply_pricing_rule(item)
 								// end change by jr 20200715 (fix bug mix pricing rule)
 							]);
