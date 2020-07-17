@@ -44,7 +44,8 @@ def execute(filters=None):
 		fields=['*'],
 		filters = {
 			'company': str(filters.get("company")),
-			'posting_date': ['between', [str(filters.get("date_from")), str(filters.get("date_to"))]]
+			'posting_date': ['between', [str(filters.get("date_from")), str(filters.get("date_to"))]],
+			'docstatus': ['in', ['0','1']]
 #			'posting_date': ['<', str(filters.get("date_to"))]
 		}
 	)
