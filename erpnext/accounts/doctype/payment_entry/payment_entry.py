@@ -474,6 +474,21 @@ class PaymentEntry(AccountsController):
 
 				gle = party_gl_dict.copy()
 
+				# change by jr 20200717 (posting unallocated amount to income)
+				co = frappe.db.get_list("Company", 
+					fields = ['*'],
+					filters = {
+						'name': self.company
+					}
+				)
+				gle.update({
+					"account": "930004 - OTHER INCOME - " + co[0].abbr,
+					"party_type": "",
+					"party": "",
+					"cost_center": co[0].cost_center
+				})
+				# end change by jr 20200717 (posting unallocated amount to income)
+
 				gle.update({
 					dr_or_cr + "_in_account_currency": self.unallocated_amount,
 					dr_or_cr: base_unallocated_amount
