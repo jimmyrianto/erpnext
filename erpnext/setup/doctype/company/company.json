@@ -48,6 +48,7 @@
   "default_cash_account",
   "default_receivable_account",
   "round_off_account",
+  "z_round_income_account",
   "round_off_cost_center",
   "write_off_account",
   "discount_allowed_account",
@@ -748,13 +749,19 @@
    "fieldname": "text2",
    "fieldtype": "Data",
    "label": "Text 2"
+  },
+  {
+   "fieldname": "z_round_income_account",
+   "fieldtype": "Link",
+   "label": "Round Income Account",
+   "options": "Account"
   }
  ],
  "icon": "fa fa-building",
  "idx": 1,
  "image_field": "company_logo",
  "links": [],
- "modified": "2020-07-13 10:39:21.065099",
+ "modified": "2020-07-17 11:29:09.837844",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Company",

@@ -482,7 +482,7 @@ class PaymentEntry(AccountsController):
 					}
 				)
 				gle.update({
-					"account": "930004 - OTHER INCOME - " + co[0].abbr,
+					"account": co[0].z_round_income_account,
 					"party_type": "",
 					"party": "",
 					"cost_center": co[0].cost_center
