@@ -94,10 +94,10 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Series",
    "no_copy": 1,
-   "options": "z_company_code..####",
+   "options": "z_company_code.#####",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -112,6 +112,7 @@
    "fieldname": "customer_name",
    "fieldtype": "Data",
    "in_global_search": 1,
+   "in_list_view": 1,
    "label": "Full Name",
    "no_copy": 1,
    "oldfieldname": "customer_name",
@@ -130,6 +131,7 @@
    "default": "Company",
    "fieldname": "customer_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Type",
    "oldfieldname": "customer_type",
    "oldfieldtype": "Select",
@@ -484,6 +486,7 @@
   {
    "fieldname": "company",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Company",
    "options": "Company",
    "reqd": 1
@@ -575,13 +578,26 @@
  "idx": 363,
  "image_field": "image",
  "links": [],
- "modified": "2020-07-04 12:31:43.178728",
+ "modified": "2020-07-20 13:46:16.758014",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",
  "name_case": "Title Case",
  "owner": "Administrator",
- "permissions": [],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "ASC",
