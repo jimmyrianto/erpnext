@@ -24,8 +24,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Nama Pasar",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "naming_series",
@@ -37,7 +36,7 @@
   }
  ],
  "links": [],
- "modified": "2020-07-21 14:55:01.758678",
+ "modified": "2020-07-21 15:51:04.619613",
  "modified_by": "Administrator",
  "module": "CRM",
  "name": "Pasar",
