@@ -1,13 +1,14 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "field:nama_pasar",
+ "autoname": "naming_series:",
  "creation": "2020-04-22 13:23:49.455193",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "company",
+  "naming_series",
   "nama_pasar"
  ],
  "fields": [
@@ -25,10 +26,18 @@
    "label": "Nama Pasar",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PSR.#####",
+   "reqd": 1,
+   "set_only_once": 1
   }
  ],
  "links": [],
- "modified": "2020-06-25 11:18:07.911617",
+ "modified": "2020-07-21 14:55:01.758678",
  "modified_by": "Administrator",
  "module": "CRM",
  "name": "Pasar",
