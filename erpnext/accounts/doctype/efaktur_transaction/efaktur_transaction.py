@@ -6,6 +6,7 @@ from __future__ import unicode_literals
 from frappe import msgprint, _
 from frappe.model.document import Document
 from frappe.utils.csvutils import build_csv_response
+from frappe.utils.xlsxutils import build_xlsx_response
 from frappe.utils import round_based_on_smallest_currency_fraction
 from datetime import datetime
 
@@ -237,20 +238,22 @@ def export_efaktur(efaktur_transaction_id):
 						total_ppn = total_ppn + ppn
 						items.append(
 							[
-								'OF',sii[k].item_code,sii[k].item_name,sii[k].price_list_rate,
-								sii[k].qty,str(amount),str(diskon),str(dpp),str(ppn),'0','0','',
-								'','','','','','',''
+								'OF',str(sii[k].item_code),str(sii[k].item_name),
+								str(sii[k].price_list_rate),str(sii[k].qty),str(amount),
+								str(diskon),str(dpp),str(ppn),'0','0','','','','','','','',''
 							]
 						)
+				efd = datetime.strptime(str(eft[i].efaktur_date), "%Y-%m-%d")
+				efd = efd.strftime("%d/%m/%Y")
 				columns.append(
 					[
-						'FK','01','0',eft[i].efaktur_id,
-						datetime.strptime(str(si[i].posting_date), "%Y-%m-%d").month,
-						datetime.strptime(str(si[i].posting_date), "%Y-%m-%d").year,
-						eft[i].efaktur_date,'',
-						si[j].customer_name,find_address_by_name(addcust, si[j].customer_address),
+						'FK','01','0',str(eft[i].efaktur_id).replace('.',''),
+						str(datetime.strptime(str(si[i].posting_date), "%Y-%m-%d").month),
+						str(datetime.strptime(str(si[i].posting_date), "%Y-%m-%d").year),
+						str(efd),'',str(si[j].customer_name),
+						str(find_address_by_name(addcust, si[j].customer_address)),
 						str(total_dpp),str(total_ppn),'0','','0',
-						'0','0','0',si[j].name
+						'0','0','0',str(si[j].name)
 					]
 				) 
 				columns.append(
@@ -262,7 +265,7 @@ def export_efaktur(efaktur_transaction_id):
 				for k in range(len(items)):
 					columns.append(items[k])
 
-	build_csv_response(columns, 'efaktur_template')
+	build_xlsx_response(columns, 'efaktur_template')
 
 def find_address_by_name(arr, name):
 	for x in arr:
