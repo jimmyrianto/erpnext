@@ -15,6 +15,7 @@
   "customer",
   "z_so_ax",
   "pasar",
+  "nama_pasar",
   "customer_name",
   "order_type",
   "skip_delivery_note",
@@ -1210,13 +1211,19 @@
    "fieldname": "pasar",
    "fieldtype": "Data",
    "label": "Pasar"
+  },
+  {
+   "fetch_from": "customer.nama_pasar",
+   "fieldname": "nama_pasar",
+   "fieldtype": "Data",
+   "label": "Nama Pasar"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-07-15 15:40:07.254319",
+ "modified": "2020-07-22 19:43:02.295427",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Sales Order",

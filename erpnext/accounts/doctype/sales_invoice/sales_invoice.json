@@ -12,6 +12,7 @@
   "customer",
   "customer_name",
   "pasar",
+  "nama_pasar",
   "z_si_ax",
   "tax_id",
   "is_pos",
@@ -1594,13 +1595,19 @@
    "fieldname": "pasar",
    "fieldtype": "Data",
    "label": "Pasar"
+  },
+  {
+   "fetch_from": "customer.nama_pasar",
+   "fieldname": "nama_pasar",
+   "fieldtype": "Data",
+   "label": "Nama Pasar"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 181,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-07-06 11:34:32.383405",
+ "modified": "2020-07-22 19:40:06.271624",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",
