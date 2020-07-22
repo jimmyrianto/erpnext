@@ -414,8 +414,8 @@ def apply_pricing_rule_on_transaction(doc):
 	values = {}
 	conditions = get_other_conditions(conditions, values, doc)
 
-	pricing_rules = frappe.db.sql(""" Select distinct `tabPricing Rule`.* from `tabPricing Rule`
-		inner join `tabPricing Rule Customer Code` on `tabPricing Rule Customer Code`.parent = `tabPricing Rule`.name
+	pricing_rules = frappe.db.sql(""" Select distinct `tabPricing Rule`.* from `tabPricing Rule`,
+		`tabPricing Rule Customer Code` 
 		where  {conditions} and `tabPricing Rule`.disable = 0
 	""".format(conditions = conditions), values, as_dict=1)
 
