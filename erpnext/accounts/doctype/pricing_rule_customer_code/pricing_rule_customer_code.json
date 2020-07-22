@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "creation": "2020-07-22 13:41:56.374609",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-07-22 13:49:02.599435",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Pricing Rule Customer Code",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
