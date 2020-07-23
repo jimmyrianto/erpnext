@@ -143,8 +143,8 @@ def get_other_conditions(conditions, values, args):
 		if args.get(field):
 			conditions += " and ifnull(`tabPricing Rule Customer Code`.{0}, '') in (%({1})s, '')".format(field, field)
 			values[field] = args.get(field)
-		else:
-			conditions += " and ifnull(`tabPricing Rule Customer Code`.{0}, '') = ''".format(field)
+		#else:
+		#	conditions += " and ifnull(`tabPricing Rule Customer Code`.{0}, '') = ''".format(field)
 
 	for field in ["company", "supplier", "campaign", "sales_partner"]:
 		if args.get(field):
