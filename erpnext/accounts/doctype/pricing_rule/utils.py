@@ -80,7 +80,10 @@ def _get_pricing_rules(apply_on, args, values):
 
 	pricing_rules = frappe.db.sql("""select distinct `tabPricing Rule`.*,
 			{child_doc}.{apply_on_field}, {child_doc}.uom
-		from `tabPricing Rule`, {child_doc}, `tabPricing Rule Customer Code`
+		from `tabPricing Rule`
+		inner join {child_doc} on {child_doc}.parent = `tabPricing Rule`.name
+		left join `tabPricing Rule Customer Code` on `tabPricing Rule Customer Code`.parent = `tabPricing Rule`.name
+		
 		where ({item_conditions} or (`tabPricing Rule`.apply_rule_on_other is not null
 			and `tabPricing Rule`.{apply_on_other_field}=%({apply_on_field})s) {item_variant_condition})
 			and {child_doc}.parent = `tabPricing Rule`.name
@@ -141,10 +144,10 @@ def _get_tree_conditions(args, parenttype, table, allow_blank=True):
 def get_other_conditions(conditions, values, args):
 	for field in ["customer"]:
 		if args.get(field):
-			conditions += " and ifnull(`tabPricing Rule Customer Code`.{0}, '') in (%({1})s, '')".format(field, field)
+			conditions += " and (ifnull(`tabPricing Rule Customer Code`.{0}, '') in (%({1})s, '') or `tabPricing Rule`.applicable_for != 'Customer')".format(field, field)
 			values[field] = args.get(field)
-		#else:
-		#	conditions += " and ifnull(`tabPricing Rule Customer Code`.{0}, '') = ''".format(field)
+		else:
+			conditions += " and ifnull(`tabPricing Rule Customer Code`.{0}, '') = ''".format(field)
 
 	for field in ["company", "supplier", "campaign", "sales_partner"]:
 		if args.get(field):
@@ -414,8 +417,8 @@ def apply_pricing_rule_on_transaction(doc):
 	values = {}
 	conditions = get_other_conditions(conditions, values, doc)
 
-	pricing_rules = frappe.db.sql(""" Select distinct `tabPricing Rule`.* from `tabPricing Rule`,
-		`tabPricing Rule Customer Code` 
+	pricing_rules = frappe.db.sql(""" Select distinct `tabPricing Rule`.* from `tabPricing Rule`
+		left join `tabPricing Rule Customer Code` on `tabPricing Rule Customer Code`.parent = `tabPricing Rule`.name
 		where  {conditions} and `tabPricing Rule`.disable = 0
 	""".format(conditions = conditions), values, as_dict=1)
 
