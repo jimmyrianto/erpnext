@@ -41,6 +41,7 @@
   "master_group_section",
   "location",
   "pasar",
+  "nama_pasar",
   "z_column_break_1",
   "chain",
   "channel",
@@ -572,13 +573,20 @@
    "label": "Pasar",
    "options": "Pasar",
    "reqd": 1
+  },
+  {
+   "fetch_from": "pasar.nama_pasar",
+   "fieldname": "nama_pasar",
+   "fieldtype": "Data",
+   "label": "Nama Pasar",
+   "read_only": 1
   }
  ],
  "icon": "fa fa-user",
  "idx": 363,
  "image_field": "image",
  "links": [],
- "modified": "2020-07-20 13:46:16.758014",
+ "modified": "2020-07-23 08:13:34.823154",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",
