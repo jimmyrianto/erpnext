@@ -1209,21 +1209,24 @@
   {
    "fetch_from": "customer.pasar",
    "fieldname": "pasar",
-   "fieldtype": "Data",
-   "label": "Pasar"
+   "fieldtype": "Link",
+   "label": "Pasar",
+   "options": "Pasar",
+   "read_only": 1
   },
   {
-   "fetch_from": "customer.nama_pasar",
+   "fetch_from": "pasar.nama_pasar",
    "fieldname": "nama_pasar",
    "fieldtype": "Data",
-   "label": "Nama Pasar"
+   "label": "Nama Pasar",
+   "read_only": 1
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-07-22 19:43:02.295427",
+ "modified": "2020-07-23 08:20:19.792977",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Sales Order",

@@ -1593,21 +1593,24 @@
   {
    "fetch_from": "customer.pasar",
    "fieldname": "pasar",
-   "fieldtype": "Data",
-   "label": "Pasar"
+   "fieldtype": "Link",
+   "label": "Pasar",
+   "options": "Pasar",
+   "read_only": 1
   },
   {
-   "fetch_from": "customer.nama_pasar",
+   "fetch_from": "pasar.nama_pasar",
    "fieldname": "nama_pasar",
    "fieldtype": "Data",
-   "label": "Nama Pasar"
+   "label": "Nama Pasar",
+   "read_only": 1
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 181,
  "is_submittable": 1,
  "links": [],
- "modified": "2020-07-22 19:40:06.271624",
+ "modified": "2020-07-23 08:21:49.407863",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",

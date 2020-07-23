@@ -578,14 +578,15 @@
    "fetch_from": "pasar.nama_pasar",
    "fieldname": "nama_pasar",
    "fieldtype": "Data",
-   "label": "Nama Pasar"
+   "label": "Nama Pasar",
+   "read_only": 1
   }
  ],
  "icon": "fa fa-user",
  "idx": 363,
  "image_field": "image",
  "links": [],
- "modified": "2020-07-22 19:25:22.264111",
+ "modified": "2020-07-23 08:13:34.823154",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",
