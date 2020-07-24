@@ -549,7 +549,8 @@
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
    "label": "Channel",
-   "options": "Channel"
+   "options": "Channel",
+   "reqd": 1
   },
   {
    "fieldname": "z_column_break_1",
@@ -559,7 +560,8 @@
    "fetch_from": "company.z_company_code",
    "fieldname": "z_company_code",
    "fieldtype": "Data",
-   "label": "Z Company Code"
+   "label": "Z Company Code",
+   "read_only": 1
   },
   {
    "fieldname": "max_overdue_invoice",
@@ -586,7 +588,7 @@
  "idx": 363,
  "image_field": "image",
  "links": [],
- "modified": "2020-07-23 08:13:34.823154",
+ "modified": "2020-07-24 11:01:39.340254",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",
