@@ -13,7 +13,7 @@ frappe.ui.form.on('EFaktur Transaction', {
 
 		if (frm.doc.docstatus == 1) {
 			frm.add_custom_button("Export Efaktur", function() {
-				let get_template_url = 'erpnext.accounts.doctype.efaktur_transaction.efaktur_transaction.export_efaktur';
+				let get_template_url = '/api/method/erpnext.accounts.doctype.efaktur_transaction.efaktur_transaction.export_efaktur';
 				open_url_post(frappe.request.url, { cmd: get_template_url, efaktur_transaction_id: frm.doc.name });
 			}, "Efaktur Action");
 		}
